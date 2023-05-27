@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>UI effect & show/hide/toggle Method</title>
+	<link href="./libs/jquery-ui-1.13.1/jquery-ui.min.css" rel="stylesheet" type="text/css">
+
+	<style type="text/css">
+		
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+			display:flex;
+			justify-content: center;
+			align-items: center;
+
+			flex-direction: column;
+		}
+
+		.container{
+			width: 1200px;
+			background-color: #f4f4f4;
+			padding: 20px;
+			display: flex;
+		}
+
+		.box{
+			width: 100px;
+			height: 100px;
+			margin: 0 10px;
+		}
+
+		.square1,.square7,.square13{
+			background-color: green;
+		}
+
+		.square2,.square8{
+			background-color: orange;
+		}
+
+		.square3,.square9{
+			background-color: blue;
+		}
+
+		.square4,.square10{
+			background-color: violet;
+		}
+
+		.square5,.square11{
+			background-color: brown;
+		}
+
+		.square6,.square12{
+			background-color: steelblue;
+		}
+
+
+
+	</style>
+
+</head>
+<body>
+
+
+	<div class="container">
+		
+		<div class="box square1">1</div>
+		<div class="box square2">2</div>
+		<div class="box square3">3</div>
+		<div class="box square4">4</div>
+		<div class="box square5">5</div>
+		<div class="box square6">6</div>
+		<div class="box square7">7</div>
+		<div class="box square8">8</div>
+		<div class="box square9">9</div>
+		<div class="box square10">10</div>
+		<div class="box square11">11</div>
+		<div class="box square12">12</div>
+		<div class="box square13">13</div>
+
+	</div>
+
+	<div class="control">
+		<button type="button" id="shakebtn">shake</button>
+		<button type="button" id="bouncebtn">Bounce</button>
+		<button type="button" id="blindbtn">Blind</button>
+		<button type="button" id="clipbtn">Clip</button>
+		<button type="button" id="dropbtn">Drop</button>
+		<button type="button" id="explodebtn">Explode</button>
+		<button type="button" id="fadebtn">Fade</button>
+		<button type="button" id="foldbtn">Fold</button>
+		<button type="button" id="highlightbtn">Highlight</button>
+		<button type="button" id="puffbtn">Puff</button>
+		<button type="button" id="pulsatebtn">Pulsate</button>
+		<button type="button" id="sizebtn">Size</button>
+		<button type="button" id="slidebtn">Slide</button>
+	</div>
+
+
+
+	<script src="./libs/jquery-3.6.0.min.js" type="text/javascript"></script>
+	<script src="./libs/jquery-ui-1.13.1/jquery-ui.min.js" type="text/javascript"></script>
+
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			// console.log("hi");
+
+			// effect("shake");
+
+			// (selector).effect(type,{param},speed);
+
+
+			$(".box").hide();
+
+
+			$("#shakebtn").click(function(){
+				// $(".square1").effect("shake",1000);
+				// $(".square1").effect("shake",2000);
+				// $(".square1").effect("shake","slow");
+
+				// $(".square1").effect("shake",{
+				// 	// direction:"left" default
+				// 	// direction:"right"
+				// 	// direction:"up"
+				// 	direction:"down",
+				// 	times:5,
+				// 	distance:500
+				// },2000);
+
+
+				// $(".square1").hide("shake",1000);
+
+				// $(".square1").show("shake","slow");
+
+				$(".square1").toggle("shake","slow");
+
+			});
+
+			// bounce
+
+
+			$("#bouncebtn").click(function(){
+				// $(".square2").effect("bounce");
+				// $(".square2").effect("bounce","slow");
+				// $(".square2").effect("bounce","slow");
+				// $(".square2").effect("bounce",{
+				// 	direction:"left",
+				// 	times:5,
+				// 	distance:200
+				// },"slow");
+
+				// $(".square2").show("bounce","slow");
+
+				$(".square2").toggle("bounce","slow");
+			});
+
+			// blind
+
+			$("#blindbtn").click(function(){
+				// $(".square3").effect("blind",{
+					// direction:"left"
+					// direction:"right"
+					// direction:"up" //default
+					// direction:"down"
+				// },1000);
+
+				// $(".square3").show("blind","slow");
+
+				$(".square3").toggle("blind","slow");
+			});
+
+			// clip
+
+			$("#clipbtn").click(function(){
+				// $(".square4").effect("clip",1000);
+
+				// $(".square4").show("clip","slow");
+
+				$(".square4").toggle("clip","slow");
+			});
+
+
+			//drop
+			$("#dropbtn").click(function(){
+				// $(".square5").effect("drop",{
+				 	// direction:"left" //default
+				 	// direction:"right"
+				 	// direction:"up"
+				 	// direction:"down"
+				// },1000);
+
+				// $(".square5").show("drop","slow");
+
+				$(".square5").toggle("drop","slow");
+			});
+
+
+			// explode
+
+			$("#explodebtn").click(function(){
+				// $(".square6").effect("explode",1000);
+
+				// $(".square6").show("explode","slow");
+
+				$(".square6").toggle("explode","slow");
+			});
+
+
+			// fade
+
+			$("#fadebtn").click(function(){
+				// $(".square7").effect("fade",1000);
+
+				// $(".square7").show("fade","slow");
+
+				$(".square7").toggle("fade","slow");
+			});
+
+			//fold
+
+			$("#foldbtn").click(function(){
+				// $(".square8").effect("fold",1000);
+
+				// $(".square8").show("fold","slow");
+
+				$(".square8").toggle("fold","slow");
+			});
+
+
+			//highlight
+
+			$("#highlightbtn").click(function(){
+				// $(".square9").effect("highlight",{
+				// 	color:"aqua"
+				// },1000);
+
+				// $(".square9").show("highlight","slow");
+
+				$(".square9").toggle("highlight","slow");
+			});
+
+			//puff
+
+			$("#puffbtn").click(function(){
+				// $(".square10").effect("puff",1000);
+
+				// $(".square10").show("puff","slow");
+
+				$(".square10").toggle("puff","slow");
+			});
+
+
+			//pulsate
+
+			$("#pulsatebtn").click(function(){
+				// $(".square11").effect("pulsate",{
+				// 	times:10
+				// },1000);
+
+				// $(".square11").show("pulsate","slow");
+
+				$(".square11").toggle("pulsate","slow");
+
+			});
+
+
+			//size
+
+			$("#sizebtn").click(function(){
+				// $(".square12").effect("size",1000);
+
+				// $(".square12").show("size","slow");
+
+				$(".square12").toggle("size","slow");
+
+			});
+
+
+			//slide
+
+
+			$("#slidebtn").click(function(){
+				// $(".square13").effect("slide",{
+				// 	// direction:"left" //default
+				// 	// direction:"right"
+				// 	// direction:"up"
+				// 	direction:"down"
+				// },1000);
+
+				// $(".square13").show("slide","slow");
+
+				$(".square13").toggle("slide","slow");
+
+			});
+
+		});
+
+
+	</script>
+
+</body>
+</html>
